@@ -177,6 +177,7 @@ class App extends Component {
         function (response) {
           if (response.status !== 200) {
             call.state.infowindow.setContent("Data not loading... ");
+            document.write("data doesn't load correctly...");
             return;
           }
           //using response from foursquare we are placing informations in infowindow
@@ -191,7 +192,7 @@ class App extends Component {
         }
       )
       .catch(function (err) {
-        call.state.infowindow.setContent("Error happened in Data loading");
+        document.write("Error happened in Data loading");
       });
   }
  

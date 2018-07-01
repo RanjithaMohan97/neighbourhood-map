@@ -8,6 +8,8 @@ class Places extends Component {
 			choosenLocations: ''
 		};
 		this.chooseLocations = this.chooseLocations.bind(this);
+				this.open = this.open.bind(this);
+
 	}
 	componentWillMount() {
 		this.setState({
@@ -33,10 +35,11 @@ class Places extends Component {
 
 	}
 	//function for toggling hamburger icon
-	open = function () {
-		const side = document.querySelector('.sidebar');
+	open = function (event) {
+			event.preventDefault();
+		const side = document.querySelector(".sidebar");
+		side.classList.toggle("hidden");
 
-		(side.style.display === 'none') ? (side.style.display = 'block') : (side.style.display = 'none');
 	}
 
 	render(){
@@ -52,12 +55,12 @@ class Places extends Component {
          
 		return(
 		<div>
-                <div className="hamburgers" onClick={this.open}>
+                <div className="hamburgers" onClick={e=>this.open(e)} role="menubar"> 
                     <div className="ham"></div>
                     <div className="ham"></div>
                     <div className="ham"></div>
                 </div>
-                <div className="sidebar">
+                <div className="sidebar hidden">
 
         			<div id="search-text">
        			 	<input className="search" type="text" aria-labelledby="search places" placeholder="enter place to view " onChange = {e => this.chooseLocations(e.target.value)}/> 
