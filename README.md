@@ -7,7 +7,8 @@ The project has been developed for the FrontEnd Nanodegree Program with udacity.
 The project can be cloned or downloaded from https://github.com/RanjithaMohan97/neighbourhood-map.
 Inorder to start the project 
 * install all project dependencies with `npm install`
-* start the development server with `npm start`
+* start the development server with `npm start`.
+
 Inorder to run the project in production mode,use 
 * `npm run build`
 * `npm install -g server`
