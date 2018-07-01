@@ -8,6 +8,10 @@ The project can be cloned or downloaded from https://github.com/RanjithaMohan97/
 Inorder to start the project 
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
+Inorder to run the project in production mode,use 
+* `npm run build`
+* `npm install -g server`
+* `serve -s build`
 
 ## Technologies
 * The project has developed using [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md). 
